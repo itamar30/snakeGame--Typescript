@@ -15,7 +15,8 @@ const styles = StyleSheet.create({
         height: 30,
         width: 30,
         borderRadius: 7,
-        position: "absolute"
+        position: "absolute",
+        fontSize: 25
     }
 })
 

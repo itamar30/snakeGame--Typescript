@@ -16,7 +16,7 @@ const Game = () : JSX.Element => {
     const SNAKE_INITIAL_POSITION =[{ x:10, y:15 }];
     const FOOD_INITIAL_POSITION ={ x : 10 , y : 19 };                              
     const GAME_BOUNDS = { xMin : 0 , xMax : 34 , yMin : 0 , yMax : 62 } ;
-    const MOVE_INTERVAL = 500 ;
+    const MOVE_INTERVAL = 50 ;
     const SCORE_INCREMENT = 10 ;
   
     const [direction, setDirection] = useState<Direction>(Direction.Right);
@@ -88,7 +88,7 @@ const Game = () : JSX.Element => {
              break ;
     }
         
-    if (checkEatsFood(newHead, food, 2))
+    if (checkEatsFood(newHead, food, 1))
     {
         setFood(randomFoodPosition(GAME_BOUNDS.yMax, GAME_BOUNDS.xMax))
         setSnake([newHead, ...snake])
